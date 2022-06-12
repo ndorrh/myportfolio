@@ -13,9 +13,9 @@
     --fw-regular:300;
     --fw-bold:900;
 
-    --bg-clr:#fff;
-    --text-clr: orange;
-    --text-accent: white;
+    --bg-clr:gray;
+    --text-clr:#000000;
+    --accent-clr:#40E0D0;
 
     --fs-h1:3rem;
     --fs-h2:2.25rem;
@@ -49,6 +49,10 @@ img{
     max-width: 100%;
 }
 
+strong{
+    font-weight: var(--fw-bold);
+}
+
 /* Typography */
 
 h1,h2,h3{
@@ -65,4 +69,27 @@ h2{
 }
 h3{
     font-size: var(--fs-h3);
+}
+
+.section__tittle{
+    margin-bottom: .25em;
+
+}
+
+.section__tittle--intro{
+    font-weight: var(--fw-regular);
+}
+
+.section__tittle--intro strong{
+    display: block;
+}
+
+.section_subtitle{
+   margin: 0;
+   font-size: var(--fs-h3); 
+}
+
+.section__subtittle--intro, .section__subtittle--about{
+background: var(--accent-clr);
+font-family: var(--ff-secondary);
 }
