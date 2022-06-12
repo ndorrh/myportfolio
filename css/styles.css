@@ -118,6 +118,10 @@ position:relative;
     box-shadow: var(--bs);
 }
 
+.section__subtittle--intro{
+    display: inline-block;
+}
+
 @media(min-width:600px) {
     .intro{
         display:grid;
@@ -142,6 +146,42 @@ position:relative;
     grid-row: 2;
     text-align:right;
     position: relative;
-    left:-1.5em;
+    left:-.125em;
     width: calc(100%+ 1.5em);
+}
+
+/*--My services section*/
+.my-services{
+    background-color: var(--bg-clr) ;
+    background-image: url(../img/jscode.jpg);
+    color: var(--text-clr);
+    background-blend-mode: multiply;
+    background-size: cover;
+    text-align: center;
+
+}
+
+.section__tittle--services{
+    color: var(--accent-clr);
+    position:relative;
+}
+
+.section__tittle--services::after{
+    content:"";
+    display: block;
+    width:2em;
+    height:1px;
+    margin:0.5em auto 1em;
+    background: currentColor;
+    opacity: .25;
+
+}
+
+@media (min-width: 800px) {
+    .services{
+        display: flex;
+        max-width: 1000px;
+        margin: 0 auto;
+        color:aliceblue;
+    }
 }
