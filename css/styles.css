@@ -38,6 +38,10 @@
 
 /*General styles*/
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background: var(--light-clr);
     color:var(--dark-clr);
@@ -181,6 +185,27 @@ header{
     top: 1em;
     z-index: 1000;
 }
+
+.nav-open .nav{
+    transform: translateX(0%);
+}
+
+.nav-open .nav-toggle{
+    position: fixed;
+}
+
+.nav-open .hamburger{
+    transform:rotate(.625turn);
+}
+
+.nav-open .hamburger::after{
+    opacity: 0;
+}
+
+.nav-open .hamburger::before{
+    transform: rotate(90deg) translateX(-6px);
+}
+
 .hamburger{
   
   display: block;
@@ -190,7 +215,7 @@ header{
 .hamburger,
 .hamburger::before,
 .hamburger::after{
-    background: var(--dark-clr);
+    background: var(--accent-clr);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -207,6 +232,7 @@ header{
 
 .hamburger::before{top: 6px;}
 .hamburger::after{bottom: 6px;}
+
 .logo{
     max-width: 100px;
 }
